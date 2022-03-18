@@ -6,6 +6,93 @@
   --box-color-3: #A5FF01;
 }
 
+body, html, header, * {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: 'Bebas Neue', Impact, sans-serif;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+header h1{
+  text-align: center;
+  width: 15%;
+  font-size: 3.5vw;
+  margin: 2%;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+}
+
+.score div {
+  color: var(--primary-color);
+  padding: 2%;
+  font-size: 3vh;
+}
+
+#message{
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 2%;
+  font-size: 3vh;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.box {
+  margin: 5%;
+  width: 33.33%;
+  text-align: center;
+  border: 0.3rem solid var(--primary-color);
+  border-radius: 10px;
+
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 20vh;
+  height: 20vh;
+  font-size: 6vh;
+  
+}
+
+.box:after {
+  content: "";
+  display: block;
+  padding-bottom: 33.33%;
+}
+
+#box-1 {
+  background-color: var(--box-color-1);
+}
+
+#box-2 {
+  background-color: var(--box-color-2);
+}
+
+#box-3 {
+  background-color: var(--box-color-3);
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .boxes {
+      flex-direction: column;
+      align-items: center;
+    }
 }
